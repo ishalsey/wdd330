@@ -11,6 +11,6 @@ links.forEach(
     link => {
         ol.innerHTML +=
 
-        `<li><a href="${link.url}">${link.label}</a></li>`
+        `<li><a href="${/week1/notes.html}">${link.label}</a></li>`
     }
 )
