@@ -3,7 +3,7 @@ let ol = document.querySelector('ol');
 const links = [
     {
         label: "Week1 notes",
-        url: "/wdd330/week1/index.html"
+        url: "/wdd330/week1/html/notes.html"
     }
 ];
 
