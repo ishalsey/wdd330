@@ -28,21 +28,25 @@ section.appendChild(div2);
 
 const ul = document.createElement('ul');
 
-students[0].hobbies.forEach(
+students[0].hobbies.forEach
     hobby => {
         const li = document.createElement('li');
         li.textContent = hobby;
         ul.appendChild(li);
-    }
-);
+    };
 div2.innerHTML += `<h3>Hobbies</h3>`;
 div2.appendChild(ul);
 section.appendChild(div2);
 
 
-//can get info from multiple arrays
-listName.forEach(
-    newName => {
-        
-    }
-)
+
+//Example from readings
+const info = document.querySelector('#info');
+
+
+const button = document.createElement('button');
+button.textContent = 'Click Me!!'
+
+info.appendChild(button);
+
+button.addEventListener('click', () => alert('You Clicked!'));

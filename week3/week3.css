@@ -1,3 +1,13 @@
 .div1{
     font-style: italic;
 }
+button{
+    width: 80px;
+    height:20px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: crimson;
+    box-shadow: 2px 2px grey;
+    color: white;
+}
