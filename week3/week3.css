@@ -11,3 +11,7 @@ button:hover{
     box-shadow: 2px 2px grey;
     color: white;
 }
+body{
+    height:max-content;
+    background-color: aqua;
+}
