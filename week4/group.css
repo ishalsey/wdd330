@@ -25,12 +25,6 @@ p:nth-child(1n){
     border-top: none;
     border-left: none;
 }
-p:nth-child(7){
-    border-bottom: none;
-}
-p:nth-child(8){
-    border-bottom: none;
-}
-p:nth-child(9){
+p:nth-child(n+7){
     border-bottom: none;
 }
