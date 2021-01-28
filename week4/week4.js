@@ -10,16 +10,16 @@ students.push(student2);
 
 print();
 */
-const tbody = document.querySelector('tbody');
+// const tbody = document.querySelector('tbody');
 
-tbody.innerHTML = students.map(
-    student =>
-    `<tr>
-        <td>${student.FirstName}</td>
-        <td>${student.LastName}</td>
-        <td>${student.INumber}</td>
-    </tr>`
-).join('');
+// tbody.innerHTML = students.map(
+//     student =>
+//     `<tr>
+//         <td>${student.FirstName}</td>
+//         <td>${student.LastName}</td>
+//         <td>${student.INumber}</td>
+//     </tr>`
+// ).join('hello');
 print();
 document.querySelector('#submit')
 .addEventListener('click', (event) => {
