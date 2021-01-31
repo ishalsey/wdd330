@@ -12,7 +12,7 @@ function search(event) {
     event.preventDefault();
 };
 
-/* input.value = 'Search Here';
+input.value = 'Search Here';
 input.addEventListener('focus', function(){
     if (input.value==='Search Here') {
         input.value = '' 
@@ -21,6 +21,5 @@ input.addEventListener('focus', function(){
 input.addEventListener('blur', function(){
     if(input.value === '') {
         input.value = 'Search Here';
-    } }, false); */
+    } }, false);
 
-    
