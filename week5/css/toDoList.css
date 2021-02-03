@@ -1,0 +1,26 @@
+section{
+    border: 1px solid black;
+    max-width: 400px;
+    min-height: 500px;
+    margin: 80px auto;
+}
+section div input{
+    width: 30px;
+    height: 30px;
+}
+section div input:checked{
+    color: green;
+}
+section div{
+    font-size: 30px;
+}
+#newDate{
+    min-width: 125px;
+    height: 15px;
+}
+section div p{
+    font-size: 20px;
+    line-height: 1px;
+    margin: 0;
+    margin-left: 45px;
+}
