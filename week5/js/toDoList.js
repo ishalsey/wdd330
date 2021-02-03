@@ -20,9 +20,9 @@ button.addEventListener('click', (event) => {
 function print() {
     const div = document.querySelector('#insert');
     div.innerHTML = list.map(
-        lists =>
+        item =>
         `
-        <input type="checkbox">${lists.input}</input><br>
+        <input type="checkbox" id="${item.Id}">${item.Input}</input><br>
         <p>Finish By:<input type="date" id="newDate"></p>
         `
     ).join('<br>');
