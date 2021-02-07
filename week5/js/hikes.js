@@ -101,4 +101,4 @@ function renderOneHikeFull(hike) {
   const item = document.createElement("li");
 
   return item;
-}
+};
