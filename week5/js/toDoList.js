@@ -4,17 +4,33 @@ import{ToDo} from './listClass.js';
 /* const todo = new ToDoList{'shovel the driveway'};
 console.log(ToDoList); */
 
-const list = [];
+let list = [];
+
+if(localStorage.getItem('list')){
+    list = JSON.parse(localStorage.getItem('list'));
+}
+
 print();
 const button = document.querySelector('#add')
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    const newItem = new ToDo(
-        document.querySelector('#input').value
-    );
+    const input = document.querySelector('#input');
+    const newItem = new ToDo(input.value)
+    /* function setToDoList() {
+        if (list.length > 1) {
+            let toDoList = document.querySelector('ul');
+            list.forEach(
+                toDo => {
+                    toDoList.innerHTML += `<li>${toDo.input}</li>`
+                }
+            )
+        }
+    } */
+    
     list.push(newItem);
     print();
     document.forms[0].reset();
+    localStorage.setItem('list', JSON.stringify(list));
 });
 
 function print() {
@@ -22,8 +38,11 @@ function print() {
     div.innerHTML = list.map(
         item =>
         `
-        <input type="checkbox" id="${item.Id}">${item.Input}</input><br>
-        <p>Finish By:<input type="date" id="newDate"></p>
+        <div>
+            <input type="checkbox" value="${item.Id}" checked id="${item.Id}">${item.Input}</input>
+            <input type="button" class="delete" value="X"></input>
+        </div>
         `
-    ).join('<br>');
+    ).join('');
 }
+console.log(list);
