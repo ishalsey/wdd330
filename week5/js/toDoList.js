@@ -38,11 +38,17 @@ function print() {
     div.innerHTML = list.map(
         item =>
         `
-        <div>
-            <input type="checkbox" value="${item.Id}" checked id="${item.Id}">${item.Input}</input>
+        <div id="newText">
+            <input type="checkbox" value="${item.Id}" checked class="box" id="${item.Id}">${item.Input}</input>
             <input type="button" class="delete" value="X"></input>
         </div>
         `
     ).join('');
 }
 console.log(list);
+
+let deleting = document.querySelector('.delete');
+
+deleting.addEventListener('click', (event) => {
+    localStorage.removeItem('${item.Id}');
+})
