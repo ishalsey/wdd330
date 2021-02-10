@@ -52,3 +52,4 @@ let deleting = document.querySelector('.delete');
 deleting.addEventListener('click', (event) => {
     localStorage.removeItem('${item.Id}');
 })
+//dom javascript parent delete
