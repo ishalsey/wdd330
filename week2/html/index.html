@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../../Main/css/portfolio.css">
     <title>Week02 - Team Activity</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,25 +24,23 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div>
-                <label for="quantity">Name: </label>
-                <input type="number" id="input_a" name="name">
-                <input type="number" id="input_b" name="name">
-            </div>
-            <div>
-                <button id="add_btn">+</button>
-                <button id="sub_btn">-</button>
-                <button id="mul_btn">*</button>
-                <button id="div_btn">/</button>
-                <button id="save_btn">step 02</button>
-            </div>
-            <div id="result">
-
-            </div>
-        </section>
+        <h1>Week 2</h1>
+        <h4>Highlighted Code</h4>
+        <p>
+            const btn = document.querySelector('button');
+            const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+            function change(){
+            document.body.style.background = rainbow[Math.floor(7*Math.random())];
+            }
+            btn.addEventListener('click', change);
+        </p>
+        <h4>Other Links</h4>
+        <p>
+            <a href="../html/notes.html">Week 2 Notes</a><br>
+            <a href="../html/group.html">Week 2 Group Project</a>
+        </p>
     </main>
-    <script src="../js/group.js"></script>
     <script src="../../Main/js/portfolio.js"></script>
 </body>
+
 </html>

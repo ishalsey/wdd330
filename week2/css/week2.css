@@ -1,0 +1,21 @@
+body{
+    background-color: lightgray;
+}
+h2{
+    text-align: center;
+}
+h2 a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: lightblue;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.26) 2px 2px;
+}
+h2 a:hover{
+    background-color: lightcoral;
+    box-shadow: black 4px 4px;
+}

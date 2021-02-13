@@ -44,9 +44,9 @@ section.appendChild(div2);
 const info = document.querySelector('#info');
 
 
-const button = document.createElement('button');
-button.textContent = 'Click Me!!'
+const buttons = document.createElement('button');
+buttons.textContent = 'Click Me!!'
 
-info.appendChild(button);
+info.appendChild(buttons);
 
-button.addEventListener('click', () => alert('You Clicked!'));
+buttons.addEventListener('click', () => alert('You Clicked!'));
