@@ -19,9 +19,9 @@ button.addEventListener('click', (event) => {
     localStorage.setItem('list', JSON.stringify(list));
 });
 
-function print(toDos) {
+function print() {
     const div = document.querySelector('#insert');
-    div.innerHTML = toDos.map(
+    div.innerHTML = list.map(
         item =>
             `
         <div id="newText">
@@ -51,7 +51,20 @@ function print(toDos) {
 }
 
  let deleting = document.querySelector('.delete');
- const deletedIndex = list.IndexOf(x => x.Id == deletedIndex);
- deleting.addEventListener('click', (event) => {
+ const deletedIndex = list.indexOf(x => x.Id == deletedIndex);
+ console.log(deletedIndex);
      list.splice(deletedIndex, 1)
+
+const check = document.querySelector('#checkmarked');
+const uncheck = document.querySelector('#unchecked');
+const all = document.querySelector('#all');
+
+check.addEventListener('click', () => {
+    print(list.filter(x => x.Completed));
+})
+uncheck.addEventListener('click', () => {
+    print(list.filter(x => !x.Completed));
+})
+check.addEventListener('click', () => {
+    print(list.filter(x => x.Completed & !x.Completed));
 })
