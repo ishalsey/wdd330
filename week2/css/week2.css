@@ -3,6 +3,7 @@ body{
 }
 h2{
     text-align: center;
+    background-color: lightgrey;
 }
 h2 a{
     text-decoration: none;
