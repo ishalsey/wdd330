@@ -1,0 +1,69 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: black;
+    color: #666666;
+}
+#cta{
+    display: grid;
+    grid-template-columns: 249px 1fr;
+    gap: 30px;
+    background-color: white;
+    max-width: 670px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#cta img {
+    width: 249px;
+}
+#cta div{
+    width: 370px;
+}
+#cta h1{
+    font-size: 2.2em;
+    text-align: center;
+    line-height: 1em;
+}
+#cta p{
+    font-size: 1.1em;
+    text-align: center;
+}
+.text-input{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #666666;
+}
+#cta label{
+    font-size: .9em;
+    cursor: pointer;
+}
+.submit-button{
+    display: block;
+    background-color: #e39968;
+    color: white;
+    font-size: 1.05em;
+    font-weight: bold;
+    padding: 13px 15px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.right{
+    float: right;
+    font-weight: bold;
+    font-size: 2em;
+}
+.right:link, .right:visited, .right:hover, .right:active{
+    color: #666666;
+    text-decoration: none;
+}
+.right:hover{
+    color: #e39968;
+}
