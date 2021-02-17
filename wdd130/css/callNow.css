@@ -41,6 +41,8 @@ body{
 #cta label{
     font-size: .9em;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .submit-button{
     display: block;
@@ -54,6 +56,9 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.submit-button:hover{
+    box-shadow: #66666667 2px 2px;
 }
 .right{
     float: right;

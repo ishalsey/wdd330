@@ -14,14 +14,14 @@ button.addEventListener('click', (event) => {
     const newItem = new ToDo(input.value)
 
     list.push(newItem);
-    print();
+    print(list);
     document.forms[0].reset();
     localStorage.setItem('list', JSON.stringify(list));
 });
 
-function print() {
+function print(filteredList) {
     const div = document.querySelector('#insert');
-    div.innerHTML = list.map(
+    div.innerHTML = filteredList.map(
         item =>
             `
         <div id="newText">
@@ -48,12 +48,20 @@ function print() {
         }
     )
 
+    const deleteButtons = document.querySelectorAll('input[type="button"]');
+    deleteButtons.forEach(
+        deleteButton => {
+            deleteButton.addEventListener('click', (event) => {
+                const id = Number(event.target.value);
+                console.log(id);
+                const pos = list.indexOf(todo => todo.Id === id);
+                list.splice(pos, 1);
+                localStorage.setItem('list', JSON.stringify(list));
+                print(list);
+            })
+        }
+    )
 }
-
- let deleting = document.querySelector('.delete');
- const deletedIndex = list.indexOf(x => x.Id == deletedIndex);
- console.log(deletedIndex);
-     list.splice(deletedIndex, 1)
 
 const check = document.querySelector('#checkmarked');
 const uncheck = document.querySelector('#unchecked');
@@ -61,10 +69,11 @@ const all = document.querySelector('#all');
 
 check.addEventListener('click', () => {
     print(list.filter(x => x.Completed));
+    console.log('here');
 })
 uncheck.addEventListener('click', () => {
     print(list.filter(x => !x.Completed));
 })
-check.addEventListener('click', () => {
-    print(list.filter(x => x.Completed & !x.Completed));
+all.addEventListener('click', () => {
+    print(list);
 })
