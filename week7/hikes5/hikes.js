@@ -140,9 +140,14 @@ function renderOneHikeFull(hike) {
             <p>${hike.description}</p>
         </div>
         <div>
-            <h3>How to get there</h3>
-            <p>${hike.directions}</p>
+            <h3>Comments</h3>
+            <ul id="commentList"></ul>
+            <form>
+            <input type="text" name="newComment" id="${hike.Id}" placeholder="new comment">
+            <button id="addComment"></button>
+        </form>
         </div>
+
     
     `;
   return item;
