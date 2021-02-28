@@ -1,0 +1,89 @@
+section{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    background-color: black;
+    animation-name: border;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin: 200px auto;
+  }
+  div{
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  #box1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: move1;
+    animation-duration: 5s;
+    
+  }
+  #box2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    left: 400px;
+    top: -100px;
+    animation-name: move2;
+    animation-duration: 5s;
+  }
+  #box3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    top: 200px;
+    left: 400px;
+    animation-name: move3;
+    animation-duration: 5s;
+  }
+  #box4{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation-name: move4;
+    animation-duration: 5s;
+    top: 100px;
+  }
+  @keyframes move1{
+    0%{background-color: red; left: 0px; top: 0px;}
+    25%{background-color: blue; left: 400px; top: 0px;}
+    50%{background-color: green; left: 400px; top: 400px;}
+    75%{background-color: yellow; left: 0px; top: 400px;}
+    100%{background-color: red; left: 0px; top: 0px;}
+  }
+  @keyframes move2{
+    0%{background-color: blue; left: 400px; top: -100px;}
+    25%{background-color: green; left: 400px; top: 300px;}
+    50%{background-color: yellow; left: 0px; top: 300px;}
+    75%{background-color:red; left: 0px; top: -100px;}
+    100%{background-color: blue; left: 400px; top: -100px;}
+  }
+  @keyframes move3{
+    0%{background-color: green; left: 400px; top: 200px;}
+    25%{background-color:yellow; left: 0px; top: 200px;}
+    50%{background-color: red; left: 0px; top: -200px;}
+    75%{background-color:blue; left: 400px; top: -200px;}
+    100%{background-color: green; left: 400px; top: 200px;}
+  }
+  
+  @keyframes move4{
+    0%{background-color: yellow; left: 0px; top: 100px;}
+    25%{background-color: red; left: 0px; top: -300px;}
+    50%{background-color: blue; left: 400px; top: -300px;}
+    75%{background-color:green; left: 400px; top: 100px;}
+    100%{background-color: yellow; left: 0px; top: 100px;}
+  }
+  @keyframes border{
+    0%{border: 1px solid red;}
+    25%{border: 1px dashed blue;}
+    50%{border: 1px solid green;}
+    75%{border: 1px dashed yellow;}
+    100%{border: 1px solid red;}
+  }
