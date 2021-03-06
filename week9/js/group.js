@@ -5,11 +5,26 @@ function playSound(e){
     audioElements.forEach(audio =>{
         if(keyname != audio.dataset.key) 
             return;
-        else
+        else {
             audio.currentTime = 0;
             audio.play();
             keyNow.classList.add('playing');
-            move();
+        }
+        if (keyNow.dataset.y == undefined){
+            keyNow.dataset.y = 10;
+        }
+        if (keyNow.dataset.x == undefined){
+            keyNow.dataset.x = 0;
+        }
+        if(keyNow.dataset.x <= 10){
+            keyNow.style.transform = `translateY(${keyNow.dataset.y}px)`;
+            keyNow.dataset.x = 1 + (keyNow.dataset.x*1);
+            keyNow.dataset.y = 10 + (keyNow.dataset.y*1);
+        }
+        else{
+            keyNow.dataset.x = 0;
+            keyNow.dataset.y = 10;
+        }
     })
 }
 function remove(e){
