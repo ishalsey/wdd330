@@ -28,7 +28,7 @@ body,html {
   width: 10rem;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
+  background-color: grey;
   text-shadow: 0 0 .5rem black;
 }
 
@@ -48,4 +48,7 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
+}
+body{
+  background-color: black;
 }
