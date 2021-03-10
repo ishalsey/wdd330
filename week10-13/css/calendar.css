@@ -1,0 +1,14 @@
+#monthView{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+}
+.days{
+    width: 150px;
+    height: 150px;
+}
