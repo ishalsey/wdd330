@@ -1,14 +1,53 @@
-#monthView{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 100px auto;
+#month{
+    margin: 20px auto;
     border: 1px solid black;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
+    text-align: right;
+}
+#month h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#monthView{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#head{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .days{
     width: 150px;
     height: 150px;
+    border: 1px solid black;
+    padding: 5px;
+}
+#month .input{
+    display: inline;
+}
+#info{
+    display: none;
+    background-color: grey;
+}
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: slategray;
+}
+#add{
+    font-size: 40px;
+    background-color: white;
+    border: none;
+    color: tomato;
+}
+#add:hover{
+    cursor: pointer;
 }
