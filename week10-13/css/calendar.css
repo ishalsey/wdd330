@@ -48,6 +48,9 @@ body{
     border: none;
     color: tomato;
 }
+h1 i{
+    font-size: 25px;
+}
 #add:hover{
     cursor: pointer;
 }
