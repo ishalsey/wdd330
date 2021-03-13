@@ -1,11 +1,14 @@
 
 let d = new Date();
+let year = d.getFullYear();
+let month = d.getMonth();
+let day = d.getDate();
 const calendars = document.querySelector('#monthView');
 const adds = document.querySelector('#add');
 const info = document.querySelector('#info');
 
 adds.addEventListener('click', (e) => {
-    if(info.classList != 'input') {
+    if(!info.classList.contains('input')) {
         info.classList.add('input');
     }
     else {
@@ -24,3 +27,4 @@ function date(){
     }
 }
 date();
+
