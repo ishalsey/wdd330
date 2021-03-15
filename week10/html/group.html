@@ -4,12 +4,61 @@
     <meta charset="utf-8" />
         <title>Local Quakes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            main{
+                position: relative;
+            }
+            .absolute{
+                height: auto; width: 92vw;
+                position: absolute;
+                top: 0; left: 0;
+                margin: 0px; padding: 4px;
+                background-color: rgba(255,255,255,1);
+                border: 1px double darkred;
+            }
+            .property_group{
+                margin: 4px 0px;
+                font-weight: 600;
+                text-decoration: underline;
+                font-size: 1.2rem;
+            }
+            .sub_property{
+                margin: 4px 8px;
+                padding: 2px 6px;
+                color: rgba(40,40,40,0.8);
+                overflow-wrap: break-word;
+            }
+            .sub_type{
+                font-weight: 600;
+                color: rgba(20,20,20,1);
+            }
+            .exit-btn{
+                height: 20px; width: 20px;
+                position: absolute;
+                top: -10px; right: -10px;
+                border-radius: 50%;
+                background-color: black;
+                border: 3px ridge white;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                padding: 2px 1px 1px 0px;
+                color: white;
+            }
+            .hidden{
+                display: none;
+            }
+        </style>
     </head>
+
     <body>
         <main>
             <h1>Quake List</h1>
-            <ul id="quakeList" ></ul>
+            <div class="absolute hidden">hi!</div>
+            <ul id="quakeList" >
+            </ul>
         </main>
-    <script src="../js/index.js"></script>
+        <script src="../js/index.js" type="module"></script>
     </body>
 </html>
