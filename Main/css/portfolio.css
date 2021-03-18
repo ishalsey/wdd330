@@ -1,0 +1,51 @@
+
+/* nav bar */
+
+nav ul, ul li a{
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+}
+nav{
+    margin: 0;
+}
+nav ul{
+    display: grid;
+    padding: 10px;
+    margin: 0;
+}
+.responsive li{
+    display: block;
+}
+nav li{
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+}
+.nav li:first-child{
+    display: block;
+}
+.nav li a{
+    display: grid;
+    font-size: 30px;
+    min-width: 350px;
+    transition: all .8s ease-in-out;
+}
+.nav li a:hover{
+    color: red;
+}
+
+/* Body */
+
+body{
+    margin: 0;
+    background-color: darkgrey;
+}
+header{
+    background-color: cornflowerblue;
+}
+main{
+    padding: 20px;
+    line-height: 20px;
+}

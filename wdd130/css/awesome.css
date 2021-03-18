@@ -1,0 +1,11 @@
+i{
+    color: black;
+    font-size: 200px;
+    margin: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+i:hover{
+    background-color: lightgrey;
+    transition: .6s;
+}

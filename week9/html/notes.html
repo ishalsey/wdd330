@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/notes.css">
+    <title>Week 9 Notes</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Notes</h1>
+        <h2>Questions</h2>
+        <p>
+            Why was pop up windows added into javascript? <br>
+            Are cookies done only through javascript? <br>
+
+        </p>
+        <h2>Information</h2>
+        <p>
+
+        </p>
+        <h2>Example</h2>
+        <div id="box"></div>
+        <p>
+            const squareElement = document.getElementById('box');
+            let angle = 0;
+            setInterval( () => {
+                angle = (angle + 2) % 360;
+                squareElement.style.transform = `rotate(${angle}deg)`
+            }, 1000/60);
+        </p>
+        <div id="square"></div>
+        <p>
+            const square = document.getElementById('square');
+            let angles = 0;
+            function rotate() {
+                angles = (angles + 2)%360;
+                square.style.transform = `rotate(${angles}deg)`
+                window.requestAnimationFrame(rotate);
+            }
+            const id = requestAnimationFrame(rotate);
+        </p>
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../js/notes.js"></script>
+</body>
+</html>

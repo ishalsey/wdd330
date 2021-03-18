@@ -1,0 +1,60 @@
+h1, h2, h3, h4, h5, h6, p, section{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-family: Ariel,sans-serif;
+}
+p{
+    font-family: Ariel, sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+a:link, a:visited, a:hover, a:active, a:focus{
+    color:#0000ee;
+}
+a:visited{
+    color: #551a8b;
+}
+#content{
+    width: 960px;
+    margin: 0 auto;
+}
+.call-out{
+    padding: 20px;
+    margin: 20px 0;
+    border: solid 1px #eeeeee;
+    border-radius: 3px;
+    border-left-width: 5px;
+}
+.call-out h4{
+    font-weight: 400;
+}
+.success{
+    border-left-color: green;
+}
+.success h4, .success strong {
+    color: green;
+}
+.failure{
+    border-left-color: #ce4844;
+}
+.failure h4{
+    color: #ce4844;
+}
+.half-width{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+.warning{
+    background-color: #f9f2f4;
+}
+.warning h4{
+    font-weight: bold;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../week2/css/week2.css">
+    <title>Search</title>
+</head>
+
+<body>
+    <header>
+        <h2><a href="../html/index.html">Home</a></h2>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>I-Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Class Notes</h2>
+            <form>
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+                <div>
+                    <label for="iNumber">I-number:</label>
+                    <input type="text" id="iNumber" name="iNumber">
+                </div>
+                <div>
+                    <input type="submit" value="save" id="submit">
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2>Reading Notes</h2>
+            <form action="/search" name="search">
+                <input type='text' name='search-box' placeholder='Search Here'>
+                <input name='searchInput'>
+                <button type="submit">Search</button>
+            </form>
+            <p>What I really would like to see is the full potential of using the blur and focus elements and how they can be
+                used more fully</p>
+        </section>
+    </main>
+    <script src="/week4/js/week4.js" type="module"></script>
+</body>
+
+</html>

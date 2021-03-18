@@ -1,0 +1,22 @@
+table, tr, td, th{
+    margin: 10px;
+    padding: 5px;
+}
+th{
+    font-size: 20px;
+}
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+label{
+    display: inline-block;
+    min-width: 85px;
+}
+
+section{
+    margin: 10px;
+}
+div{
+    margin: 10px;
+}
