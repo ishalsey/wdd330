@@ -6,6 +6,7 @@ let day = d.getDate();
 const calendars = document.querySelector('#monthView');
 const adds = document.querySelector('#add');
 const info = document.querySelector('#info');
+const events = [];
 
 adds.addEventListener('click', (e) => {
     if(!info.classList.contains('input')) {
@@ -27,4 +28,14 @@ function date(){
     }
 }
 date();
+
+function print() {
+    const input = document.querySelector('input');
+
+input.innerHTML = events.map(
+    event =>
+    `<tr>
+        <td>${event.date}</td>
+    </tr>`
+)}
 
