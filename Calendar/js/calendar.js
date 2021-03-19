@@ -1,4 +1,4 @@
-
+import {Event} from './event.js';
 let d = new Date();
 let year = d.getFullYear();
 let month = d.getMonth();
@@ -7,6 +7,8 @@ const calendars = document.querySelector('#monthView');
 const adds = document.querySelector('#add');
 const info = document.querySelector('#info');
 const events = [];
+const eventText = document.querySelector('#eventText');
+const eventDate = document.querySelector('#eventDate');
 
 adds.addEventListener('click', (e) => {
     if(!info.classList.contains('input')) {
@@ -23,20 +25,20 @@ const getDaysInMonth = (month, year) => {
 console.log(getDaysInMonth(3,2021));
 
 function date(){
-    for(i = 1; i <= getDaysInMonth(3,2021); i++){
-        calendars.innerHTML += `<div class='days'><p class='number'>${i}</p></div>`
+    let currentDate = new Date(2021, 3, 1)
+    for(let i = 1; i <= getDaysInMonth(3,2021); i++){
+        calendars.innerHTML += 
+        `<div class='days'>
+            <p class='number'>${currentDate.getDate() + i}</p>
+            <p></p>
+        </div>`
     }
 }
 date();
 
-function print() {
-    const input = document.querySelector('input');
-    const number = document.querySelector('.number');
-    if(number == stringify(input.date)){
-        input.innerHTML = events.map(
-            event =>
-                `<p></p>`
-        )
-    }           
-}
-
+const button = document.querySelector('#submit');
+button.addEventListener('click', () => {
+    let event = new Event(eventText.value, eventDate.value);
+    events.push(event);
+    print();
+});
