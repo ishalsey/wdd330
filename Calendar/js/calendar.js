@@ -24,18 +24,19 @@ console.log(getDaysInMonth(3,2021));
 
 function date(){
     for(i = 1; i <= getDaysInMonth(3,2021); i++){
-        calendars.innerHTML += `<div class='days'><p>${i}</p></div>`
+        calendars.innerHTML += `<div class='days'><p class='number'>${i}</p></div>`
     }
 }
 date();
 
 function print() {
     const input = document.querySelector('input');
-
-input.innerHTML = events.map(
-    event =>
-    `<tr>
-        <td>${event.date}</td>
-    </tr>`
-)}
+    const number = document.querySelector('.number');
+    if(number == stringify(input.date)){
+        input.innerHTML = events.map(
+            event =>
+                `<p></p>`
+        )
+    }           
+}
 
