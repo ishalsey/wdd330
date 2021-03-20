@@ -10,7 +10,18 @@
 <body>
     <main>
         <h1>Auth Example app</h1>
+        <form id="login">
+            <label for="userName">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password">
+            <button href="javascript:void(0)" id="submit">submit</button>
+          </form>
+          <div id="things">
+            <ul id="list"></ul>
+          </div>
     </main>
     <script type="module" src="week11.js"></script>
+    <!-- <script type="module" src="auth.js"></script> -->
 </body>
 </html>
