@@ -1,22 +1,24 @@
 import {Event} from './event.js';
+let timeNow = Date.now();
 let d = new Date();
 let year = d.getFullYear();
 let month = d.getMonth();
 let day = d.getDate();
-const calendars = document.querySelector('#monthView');
+let calendars = document.querySelector('#monthView');
 const adds = document.querySelector('#add');
 const info = document.querySelector('#info');
-const events = [];
-const eventText = document.querySelector('#eventText');
+let events = [];
+let daysInMonth = [];
 const eventDate = document.querySelector('#eventDate');
 
+
+console.log(d);
+if (localStorage.getItem('events')) {
+    events = JSON.parse(localStorage.getItem('events'));
+}
+
 adds.addEventListener('click', (e) => {
-    if(!info.classList.contains('input')) {
-        info.classList.add('input');
-    }
-    else {
-        info.classList.remove('input')
-    }
+    info.classList.toggle('input');
 })
 
 const getDaysInMonth = (month, year) => {
@@ -24,21 +26,41 @@ const getDaysInMonth = (month, year) => {
 }
 console.log(getDaysInMonth(3,2021));
 
-function date(){
-    let currentDate = new Date(2021, 3, 1)
-    for(let i = 1; i <= getDaysInMonth(3,2021); i++){
-        calendars.innerHTML += 
-        `<div class='days'>
-            <p class='number'>${currentDate.getDate() + i}</p>
-            <p></p>
-        </div>`
-    }
-}
-date();
-
+//print(events);
+const eventText = document.querySelector('#eventText');
 const button = document.querySelector('#submit');
-button.addEventListener('click', () => {
-    let event = new Event(eventText.value, eventDate.value);
-    events.push(event);
-    print();
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const text = new Event(eventText.value);
+
+    events.push(text);
+    print(events);
+    document.forms[0].reset();
+    localStorage.setItem('events', JSON.stringify(events));
 });
+let x = 1
+const informationNow = `<div class='days'><p class='number'></p><p></p></div>`
+function print(filteredList){
+    console.log(informationNow);
+    let currentDate = new Date(2021, 3, 1);
+    let daysInMonth = getDaysInMonth(currentDate.getMonth(), currentDate.getFullYear())
+    calendars.innerHTML = informationNow.repeat(daysInMonth)
+    let n = document.querySelectorAll('.number');
+    n.forEach(
+        da => {
+            da.innerHTML = x; 
+            da.id = 'day-' + x
+            x++;
+        }
+    )
+    x = 1;
+    console.log(daysInMonth)
+    // calendars.innerHTML += filteredList.map(
+    //     current =>
+
+            
+    // )
+    console.log(currentDate)
+}
+print(events);
+

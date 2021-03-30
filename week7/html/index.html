@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../../Main/css/portfolio.css">
     <title>Week 7</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,8 +20,8 @@
                 <li><a href="../../week4/html/index.html">Week 4</a></li>
                 <li><a href="../../week5/html/index.html">Week 5</a></li>
                 <li><a href="../../toDoApp/html/toDoList.html">To Do</a></li>
-                <li><a href="../../week7/html/index.html"></a>Week 7</li>
-                <li><a href="../../week8/html/index.html"></a>Week 8</li>
+                <li><a href="../../week7/html/index.html">Week 7</a></li>
+                <li><a href="../../week8/html/index.html">Week 8</a></li>
             </ul>
         </nav>
     </header>
@@ -27,11 +29,25 @@
         <h1>Week 7</h1>
         <h3>Highlighted Code</h3>
         <p>
+            let Isaiah = {name: 'Isaiah'}
+            let Sabrina = {
+            person: 'Sabrina',
+            age: 24
+            };
 
+            function People(greeting = 'Good morning'){
+            return `${greeting} my name is ${this.name}`
+            };
+            function second(hello = 'Hello'){
+            return `${hello} I am ${this.person}, and I am ${this.age} years old.`
+            };
+
+            alert(People.call(Isaiah) + '. ' + second.call(Sabrina))
         </p>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="../html/notes.html">Week 7 Notes</a> <br>
+        <a href="../hikes5/hikes.html">Week 7 Group Work</a>
     </main>
     <script src="../../Main/js/portfolio.js"></script>
 </body>
+
 </html>
