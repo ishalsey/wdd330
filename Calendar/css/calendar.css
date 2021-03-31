@@ -6,6 +6,8 @@
     overflow: hidden;
     background-color: white;
     text-align: right;
+    width: fit-content;
+    width: -moz-fit-content;
 }
 #month h1{
     text-align: center;
@@ -53,9 +55,6 @@ label{
     justify-self: center;
 }
 body{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
     background-color: slategray;
 }
 #add{
@@ -70,4 +69,8 @@ h1 i{
 }
 #add:hover{
     cursor: pointer;
+}
+header{
+    grid-column: 1/-1;
+    grid-row: 1;
 }

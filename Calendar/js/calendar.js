@@ -10,6 +10,7 @@ const info = document.querySelector('#info');
 let events = [];
 let daysInMonth = [];
 const eventDate = document.querySelector('#eventDate');
+let days = document.querySelector('.days');
 
 
 console.log(d);
@@ -54,13 +55,10 @@ function print(filteredList){
         }
     )
     x = 1;
-    console.log(daysInMonth)
-    // calendars.innerHTML += filteredList.map(
-    //     current =>
-
-            
-    // )
-    console.log(currentDate)
+    days.innerHTML += filteredList.map(
+        current => {
+        
+        }
+    )
 }
-print(events);
 
