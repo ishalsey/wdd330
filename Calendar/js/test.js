@@ -9,7 +9,7 @@ const getDaysInMonth = (month, year) => {
 };
 function date(){
     for(let i = 1; i <= getDaysInMonth(3,2021); i++){
-        calendars.innerHTML += `<div class='days'><p class='number'>${i}</p></div>`
+        calendars.innerHTML += `<div id='${i}' class='days'><p class='number'>${i}</p></div>`
     }
 };
 date();
@@ -23,30 +23,30 @@ adds.addEventListener('click', (e) => {
 
 //save to local storage
 let events = [];
-let event = []
 const button = document.querySelector('#submit');
 const eventText = document.querySelector('#eventText');
 const eventDate = document.querySelector('#eventDate');
 button.addEventListener('click', (e) => {
     e.preventDefault();
-    const text = new Event(eventText.value);
-    const ids = new Event(eventDate.value);
-    event.push(ids);
-    event.push(text);
+    const event = new Event(eventText.value, eventDate.value);
     events.push(event);
     document.forms[0].reset();
     localStorage.setItem('events', JSON.stringify(events));
+    printEvents();
 });
-console.log(events);
 
-//printing the information on the page
-
-function print() {
+//print events
+function printEvents() {
+    const events = JSON.parse(localStorage.getItem('events')); 
     const days = document.querySelector('.days');
-    days.innerHTML += calendars.map(
-        information => {
-            if(eventDate == number.value)
-                `<p>${events}</p>`
+    events.map(
+        event => {
+            const eventDate = new Date(event.EventDate);
+            const dayOfMonth = eventDate.getDate();
+            let div = document.getElementById(`${dayOfMonth}`);
+            div.innerHTML += 
+                        `<p class='event'>${event.EventText}</p>`
         }
     )
-}
+};
+printEvents();
