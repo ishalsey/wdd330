@@ -12,7 +12,6 @@ function date(){
         calendars.innerHTML += `<div id='${i}' class='days'><p class='number'>${i}</p></div>`
     }
 };
-date();
 
 //add input box toggle
 const adds = document.querySelector('#add');
@@ -27,26 +26,47 @@ const button = document.querySelector('#submit');
 const eventText = document.querySelector('#eventText');
 const eventDate = document.querySelector('#eventDate');
 button.addEventListener('click', (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     const event = new Event(eventText.value, eventDate.value);
     events.push(event);
     document.forms[0].reset();
     localStorage.setItem('events', JSON.stringify(events));
     printEvents();
 });
-
+// window.addEventListener('load', () => {
+//     events = JSON.parse(localStorage.getItem('events'));
+// })
 //print events
 function printEvents() {
-    const events = JSON.parse(localStorage.getItem('events')); 
-    const days = document.querySelector('.days');
+    calendars.innerHTML = '';
+    date();
+    // const days = document.querySelector('.days');
+    //const eventBox = document.querySelectorAll('.eventBox');
+    if(localStorage.getItem('events')){
+    events = JSON.parse(localStorage.getItem('events'));
+    }
     events.map(
         event => {
             const eventDate = new Date(event.EventDate);
             const dayOfMonth = eventDate.getDate();
             let div = document.getElementById(`${dayOfMonth}`);
             div.innerHTML += 
-                        `<p class='event'>${event.EventText}</p>`
+                        `<div class='eventBox'><p class='event'>${event.EventText}</p><p ><a class='delete' id='${event.EventId}'>X</a></p></div>`
         }
     )
+    console.log(events);
 };
 printEvents();
+
+//delete events
+
+const deleteButtons = document.querySelectorAll('.delete');
+deleteButtons.forEach(
+    deleteButton => {
+        deleteButton.addEventListener('click', (e) => {
+            events = events.filter(event => event.EventId != e.target.id);
+            localStorage.setItem('events', JSON.stringify(events));
+            printEvents();
+        })
+    }
+)
